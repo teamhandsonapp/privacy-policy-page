@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Privacy Policy · PMC Portal</title>
-  <meta name="description" content="Privacy Policy for PMC Portal, the internal work app of Team Hands On Private Limited.">
+  <title>PMC Portal · Construction project management</title>
+  <meta name="description" content="PMC Portal is the construction project management app used by Team Hands On Private Limited teams for attendance, daily progress reports, checklists, files and site alerts.">
   <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="app-icon.png">
   <style>
     :root {
       --text: #111111;
@@ -114,141 +115,135 @@
       .providers li { flex-direction: column; gap: 0; }
       footer { padding-left: 18px; padding-right: 18px; }
     }
+
+    /* Shared header link + footer nav */
+    .top a.app { text-decoration: none; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
+    footer nav a { color: var(--body); text-decoration: none; padding: 6px 2px; }
+    footer nav a:hover, footer nav a[aria-current="page"] { color: var(--text); text-decoration: underline; text-decoration-color: #b5b5b5; text-underline-offset: 3px; }
+    footer nav .sep { color: #b5b5b5; }
+
+    /* Landing page */
+    .land, .block { border-top: 0; margin-top: 0; }
+    .land { padding: 56px 24px 8px; }
+    .land .in { max-width: 992px; margin: 0 auto; display: flex; align-items: center; gap: 28px; }
+    .land img { width: 104px; height: 104px; border-radius: 24px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); flex: none; }
+    .land h1 { margin: 0; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; color: var(--text); font-weight: 750; }
+    .land .tag { margin: 6px 0 0; font-size: 18px; color: var(--muted); }
+    .land .lede { margin: 18px 0 0; font-size: 17px; line-height: 1.7; color: var(--body); max-width: 640px; }
+    .block { max-width: 1040px; margin: 0 auto; padding: 40px 24px 8px; }
+    .block h2 { font-size: 24px; margin: 0 0 18px; }
+    .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .feature { border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff; }
+    .feature svg { width: 26px; height: 26px; stroke: var(--text); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .feature h3 { margin: 12px 0 6px; font-size: 16px; color: var(--text); }
+    .feature p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--body); }
+    .who { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; padding: 0; list-style: none; }
+    .who li { margin: 0; padding: 8px 14px; border-radius: 999px; background: var(--soft); font-size: 14.5px; color: var(--text); }
+    .note { margin: 22px 0 0; padding: 14px 16px; border-radius: 10px; background: var(--soft); color: var(--body); }
+    .bigmail { font-size: 18px; font-weight: 650; }
+
+    /* Support page */
+    .narrow { max-width: 760px; margin: 0 auto; padding: 32px 24px 64px; }
+    .card { border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 0 0 24px; }
+    .card h2 { margin: 0 0 8px; font-size: 20px; display: block; }
+    .faq h3 { margin: 26px 0 6px; font-size: 17px; color: var(--text); }
+    .faq h3:first-of-type { margin-top: 8px; }
+    .faq p { margin: 0; }
+
+    @media (max-width: 900px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) {
+      .land { padding: 32px 18px 0; }
+      .land .in { flex-direction: column; align-items: flex-start; gap: 18px; }
+      .land img { width: 84px; height: 84px; border-radius: 20px; }
+      .land h1 { font-size: 34px; }
+      .land .lede { font-size: 16px; }
+      .block { padding: 32px 18px 4px; }
+      .features { grid-template-columns: minmax(0, 1fr); }
+      .narrow { padding: 24px 18px 48px; }
+    }
   </style>
 </head>
 <body>
   <header class="top">
     <div class="in">
-      <div class="app">PMC Portal</div>
+      <a class="app" href="/">PMC Portal</a>
       <div class="co">Team Hands On Private Limited</div>
     </div>
   </header>
 
-  <div class="hero">
+  <section class="land">
     <div class="in">
-      <h1>Privacy Policy for PMC Portal</h1>
-      <p>What information PMC Portal collects, how we use it, and your choices.</p>
-      <div class="updated">Last updated: 4 November 2026</div>
-    </div>
-  </div>
-
-  <div class="page">
-    <details class="toc" open>
-      <summary>Contents</summary>
-      <ol>
-        <li><a href="#who"><span>1</span>Who can use the app</a></li>
-        <li><a href="#collect"><span>2</span>Information we collect</a></li>
-        <li><a href="#use"><span>3</span>How we use your information</a></li>
-        <li><a href="#providers"><span>4</span>Service providers</a></li>
-        <li><a href="#security"><span>5</span>Security</a></li>
-        <li><a href="#retention"><span>6</span>Data retention</a></li>
-        <li><a href="#choices"><span>7</span>Your choices and requests</a></li>
-        <li><a href="#changes"><span>8</span>Changes to this policy</a></li>
-        <li><a href="#contact"><span>9</span>Contact us</a></li>
-      </ol>
-    </details>
-
-    <main class="doc">
-      <p class="intro">PMC Portal ("the app") is an internal work app provided by Team Hands On Private Limited ("we", "us") for our employees and staff. This policy explains what information the app collects, how we use it, and your choices.</p>
-
-      <div class="glance" aria-label="At a glance">
-        <div class="g yes"><h3>We collect</h3><p>Account details, work records, content you add, device info and crash reports.</p></div>
-        <div class="g not"><h3>We don't</h3><p>Collect your location, sell your data or use it for advertising.</p></div>
-        <div class="g you"><h3>Your choice</h3><p>Ask to see, correct or delete your information at any time.</p></div>
+      <img src="app-icon.png" alt="PMC Portal app icon" width="104" height="104">
+      <div>
+        <h1>PMC Portal</h1>
+        <p class="tag">Construction project management</p>
+        <p class="lede">PMC Portal brings a construction project's daily work into one app — site attendance, daily progress reports, quality checklists, drawings and documents, site issues and meetings — so the office and the site always see the same, up-to-date picture.</p>
       </div>
+    </div>
+  </section>
 
-      <section id="who">
-        <h2><span class="n">01</span>Who can use the app</h2>
-        <p>The app is only for people working with Team Hands On Private Limited. Accounts are created by our organization and given to employees. You cannot create an account in the app yourself. The app is not intended for anyone under 18.</p>
-      </section>
-
-      <section id="collect">
-        <h2><span class="n">02</span>Information we collect</h2>
-        <ul>
-          <li><strong>Account information:</strong> your name, email address, user ID and role (for example, admin or engineer).</li>
-          <li><strong>Work records:</strong> attendance check-in and check-out times, leave records, daily progress reports (DPR), task and checklist updates, and activity logs.</li>
-          <li><strong>Content you add:</strong> comments, messages, alerts, site issues, contact book entries (names, phone numbers and emails of work contacts), photos you take or choose from your gallery, and documents you upload.</li>
-          <li><strong>Device information:</strong> an app-generated device ID (used to secure your login to your device), push notification token, device model and operating system version.</li>
-          <li><strong>Crash and diagnostic data:</strong> crash reports, error logs and the screens used when an error happened. These may include your user ID, email and name so we can fix problems.</li>
-        </ul>
-        <p>We do not collect your location. We do not read your phone's contacts, calendar, messages or audio.</p>
-      </section>
-
-      <section id="use">
-        <h2><span class="n">03</span>How we use your information</h2>
-        <ul>
-          <li>To run the app's features, such as attendance, reports, tasks and notifications.</li>
-          <li>To manage your account and let you log in.</li>
-          <li>To keep accounts secure, for example by limiting login to approved devices.</li>
-          <li>To find and fix crashes and improve the app's stability.</li>
-        </ul>
-        <p>We do not use your information for advertising, and we do not sell it.</p>
-      </section>
-
-      <section id="providers">
-        <h2><span class="n">04</span>Service providers</h2>
-        <p>We use trusted service providers to run the app. They process data only on our behalf:</p>
-        <ul class="providers">
-          <li><b>Supabase</b><span>Database, login and file storage.</span></li>
-          <li><b>Sentry</b><span>Crash reports and error monitoring.</span></li>
-          <li><b>Expo</b><span>Push notifications.</span></li>
-        </ul>
-        <p>We do not share your information with anyone else, except if required by law.</p>
-      </section>
-
-      <section id="security">
-        <h2><span class="n">05</span>Security</h2>
-        <p>All data sent between the app and our servers is encrypted in transit using HTTPS. Access to data inside the app depends on your role.</p>
-      </section>
-
-      <section id="retention">
-        <h2><span class="n">06</span>Data retention</h2>
-        <p>We keep work records, such as attendance and reports, for as long as needed for business and legal purposes. When an employee leaves, their account is deactivated and their data is kept or deleted according to company policy.</p>
-      </section>
-
-      <section id="choices">
-        <h2><span class="n">07</span>Your choices and requests</h2>
-        <p>You can ask to see, correct or delete your personal information by contacting your company admin or emailing us at <a href="mailto:teamhandsonadmin@gmail.com">teamhandsonadmin@gmail.com</a>. Some records may need to be kept for legal or business reasons.</p>
-      </section>
-
-      <section id="changes">
-        <h2><span class="n">08</span>Changes to this policy</h2>
-        <p>We may update this policy from time to time. The "Last updated" date at the top shows when it was last changed.</p>
-      </section>
-
-      <section id="contact">
-        <h2><span class="n">09</span>Contact us</h2>
-        <div class="contact">
-          <div class="name">Team Hands On Private Limited</div>
-          <div>Telangana, India</div>
-          <div>Email: <a href="mailto:teamhandsonadmin@gmail.com">teamhandsonadmin@gmail.com</a></div>
+  <section class="block" aria-labelledby="features">
+    <h2 id="features">Features</h2>
+    <div class="features">
+        <div class="feature">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><path d="M15.5 11.5l2 2 3.5-4"/></svg>
+          <h3>Site workforce attendance</h3>
+          <p>Check-in and check-out for site engineers, and planned vs actual workforce by trade for every day.</p>
         </div>
-      </section>
-    </main>
-  </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 16h5"/></svg>
+          <h3>Daily Progress Reports (DPR)</h3>
+          <p>Record each day's progress, workforce, delays and photos per task, with draft and submit.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/></svg>
+          <h3>Quality checklists</h3>
+          <p>Pre-construction, construction and post-construction checklists for every task, with status history.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <h3>Files</h3>
+          <p>Drawings, transmittals, bills, quotes and site photos, organised in folders for each project.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17.5v.5"/></svg>
+          <h3>Critical alerts and site issues</h3>
+          <p>Raise and track site issues, and send urgent alerts to the right people on site.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/><path d="M8 14h3M8 17h6"/></svg>
+          <h3>Meetings and contact book</h3>
+          <p>Plan meetings, agendas and attendance, and keep project contacts in one place.</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="who">
+    <h2 id="who">Who it's for</h2>
+    <ul class="who">
+        <li>PMC teams</li>
+        <li>Project managers</li>
+        <li>Site engineers</li>
+        <li>Architects</li>
+        <li>Consultants</li>
+        <li>Contractors</li>
+    </ul>
+    <p>For everyone working on Team Hands On Private Limited projects.</p>
+    <p class="note">Accounts are created by your company admin.</p>
+  </section>
+
+  <section class="block" aria-labelledby="contact" style="padding-bottom: 56px;">
+    <h2 id="contact">Contact</h2>
+    <p class="bigmail"><a href="mailto:teamhandsonadmin@gmail.com">teamhandsonadmin@gmail.com</a></p>
+    <p>Need help with the app? See <a href="/support">Support</a>.</p>
+  </section>
 
   <footer>
     <div class="in">
-      <span>© 2026 Team Hands On Private Limited</span>
-      <span><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Terms of Service</a></span>
+      <span>Developed by TeamHandsOn © 2026</span>
+      <nav aria-label="Site"><a href="/" aria-current="page">Home</a> <span class="sep">·</span> <a href="/support">Support</a> <span class="sep">·</span> <a href="/privacy-policy">Privacy Policy</a> <span class="sep">·</span> <a href="/terms">Terms of Service</a></nav>
     </div>
   </footer>
-
-  <script>
-    // On phones the contents list starts collapsed; on wide screens it stays open as a sidebar.
-    (function () {
-      var toc = document.querySelector('.toc');
-      if (!toc) return;
-      var mq = window.matchMedia('(max-width: 900px)');
-      function sync() { if (mq.matches) toc.removeAttribute('open'); else toc.setAttribute('open', ''); }
-      sync();
-      if (mq.addEventListener) mq.addEventListener('change', sync);
-      toc.addEventListener('click', function (e) {
-        if (mq.matches && e.target.closest('a')) toc.removeAttribute('open');
-      });
-      // Keep the sidebar from being collapsed on desktop.
-      toc.querySelector('summary').addEventListener('click', function (e) { if (!mq.matches) e.preventDefault(); });
-    })();
-  </script>
 </body>
 </html>

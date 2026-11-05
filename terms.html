@@ -6,6 +6,7 @@
   <title>Terms of Service · PMC Portal</title>
   <meta name="description" content="Terms of Service for PMC Portal, the internal construction project management app of Team Hands On Private Limited.">
   <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" href="app-icon.png">
   <style>
     :root {
       --text: #111111;
@@ -114,12 +115,59 @@
       .providers li { flex-direction: column; gap: 0; }
       footer { padding-left: 18px; padding-right: 18px; }
     }
+
+    /* Shared header link + footer nav */
+    .top a.app { text-decoration: none; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
+    footer nav a { color: var(--body); text-decoration: none; padding: 6px 2px; }
+    footer nav a:hover, footer nav a[aria-current="page"] { color: var(--text); text-decoration: underline; text-decoration-color: #b5b5b5; text-underline-offset: 3px; }
+    footer nav .sep { color: #b5b5b5; }
+
+    /* Landing page */
+    .land, .block { border-top: 0; margin-top: 0; }
+    .land { padding: 56px 24px 8px; }
+    .land .in { max-width: 992px; margin: 0 auto; display: flex; align-items: center; gap: 28px; }
+    .land img { width: 104px; height: 104px; border-radius: 24px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); flex: none; }
+    .land h1 { margin: 0; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; color: var(--text); font-weight: 750; }
+    .land .tag { margin: 6px 0 0; font-size: 18px; color: var(--muted); }
+    .land .lede { margin: 18px 0 0; font-size: 17px; line-height: 1.7; color: var(--body); max-width: 640px; }
+    .block { max-width: 1040px; margin: 0 auto; padding: 40px 24px 8px; }
+    .block h2 { font-size: 24px; margin: 0 0 18px; }
+    .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .feature { border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff; }
+    .feature svg { width: 26px; height: 26px; stroke: var(--text); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .feature h3 { margin: 12px 0 6px; font-size: 16px; color: var(--text); }
+    .feature p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--body); }
+    .who { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; padding: 0; list-style: none; }
+    .who li { margin: 0; padding: 8px 14px; border-radius: 999px; background: var(--soft); font-size: 14.5px; color: var(--text); }
+    .note { margin: 22px 0 0; padding: 14px 16px; border-radius: 10px; background: var(--soft); color: var(--body); }
+    .bigmail { font-size: 18px; font-weight: 650; }
+
+    /* Support page */
+    .narrow { max-width: 760px; margin: 0 auto; padding: 32px 24px 64px; }
+    .card { border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 0 0 24px; }
+    .card h2 { margin: 0 0 8px; font-size: 20px; display: block; }
+    .faq h3 { margin: 26px 0 6px; font-size: 17px; color: var(--text); }
+    .faq h3:first-of-type { margin-top: 8px; }
+    .faq p { margin: 0; }
+
+    @media (max-width: 900px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) {
+      .land { padding: 32px 18px 0; }
+      .land .in { flex-direction: column; align-items: flex-start; gap: 18px; }
+      .land img { width: 84px; height: 84px; border-radius: 20px; }
+      .land h1 { font-size: 34px; }
+      .land .lede { font-size: 16px; }
+      .block { padding: 32px 18px 4px; }
+      .features { grid-template-columns: minmax(0, 1fr); }
+      .narrow { padding: 24px 18px 48px; }
+    }
   </style>
 </head>
 <body>
   <header class="top">
     <div class="in">
-      <div class="app">PMC Portal</div>
+      <a class="app" href="/">PMC Portal</a>
       <div class="co">Team Hands On Private Limited</div>
     </div>
   </header>
@@ -214,8 +262,8 @@
 
   <footer>
     <div class="in">
-      <span>© 2026 Team Hands On Private Limited</span>
-      <span><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Terms of Service</a></span>
+      <span>Developed by TeamHandsOn © 2026</span>
+      <nav aria-label="Site"><a href="/">Home</a> <span class="sep">·</span> <a href="/support">Support</a> <span class="sep">·</span> <a href="/privacy-policy">Privacy Policy</a> <span class="sep">·</span> <a href="/terms" aria-current="page">Terms of Service</a></nav>
     </div>
   </footer>
 
